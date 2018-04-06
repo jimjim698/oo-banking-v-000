@@ -27,8 +27,10 @@ def execute_transaction
 end
 
 def reverse_transfer
-  sender.balance = @initial_amount
+  if @status == complete
+  @sender.balance = @initial_amount
   @reciever.balance = @initial_amount
+end
 end
 
 end
