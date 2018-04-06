@@ -20,7 +20,8 @@ def execute_transaction
     @amount = 0
     @status = "complete"
   else
-   "#{rejection}"
+    @status = "rejected"
+    rejected
   end
 end
 
