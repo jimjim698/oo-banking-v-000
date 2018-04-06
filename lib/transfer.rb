@@ -13,7 +13,7 @@ def valid?
 end
 
 def execute_transaction
-  @initial_amount = @amount 
+  @initial_amount = @amount
   rejection = "Transaction rejected. Please check your account balance."
   if @sender.balance > @amount
     @sender.balance= @sender.balance - @amount
@@ -27,8 +27,8 @@ def execute_transaction
 end
 
 def reverse_transfer
-  @sender.balance = @initial_amount
-  @reciever.balance = @initial_amount
-end  
+  sender.balance = @initial_amount
+  reciever.balance = @initial_amount
+end
 
 end
